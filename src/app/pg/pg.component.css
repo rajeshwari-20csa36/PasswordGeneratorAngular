@@ -1,0 +1,116 @@
+.body{
+    background-color: #18171F;
+}
+.password-generator {
+    background-color: #3a3942;
+    color: #E6E5EA;
+    padding: 24px;
+    border-radius: 8px;
+    max-width: 400px;
+    align-items: center;
+    margin: 0 auto;
+  }
+   
+  h2 {
+    color: #817D92;
+    margin-bottom: 16px;
+  }
+   
+  .password-display {
+    background-color: #18171F;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+   
+  .password-display input {
+    background: none;
+    border: none;
+    color: #E6E5EA;
+    font-size: 20px;
+    flex-grow: 1;
+  }
+   
+  .copy-button {
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+    color: #eceff3; 
+    font-size: 1.2em;
+  }
+  
+  .copy-button:hover {
+    color: #848485; 
+  }
+   
+  .options {
+    margin-bottom: 16px;
+  }
+   
+  .character-length {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+   
+  .character-length input[type="range"] {
+    width: 100%;
+    margin: 0px;
+  }
+
+  .character-length span{
+    color: #A4FFAF;
+  }
+   
+  .checkbox-group label {
+    display: block;
+    margin-bottom: 8px;
+  }
+   
+  .strength-meter {
+    background-color: #18171F;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+  }
+   
+  .strength-bars {
+    display: flex;
+  }
+   
+  .bar {
+    width: 10px;
+    height: 28px;
+    margin-right: 8px;
+    background-color: #18171F;
+    border: 2px solid #E6E5EA;
+  }
+   
+  .bar.active {
+    background-color: #A4FFAF;
+    border-color: #A4FFAF;
+  }
+   
+  .generate-button {
+    width: 100%;
+    background-color: #A4FFAF;
+    color: #24232C;
+    border: none;
+    padding: 16px;
+    font-size: 18px;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+   
+  .generate-button i {
+    margin-left: 16px;
+    
+  }

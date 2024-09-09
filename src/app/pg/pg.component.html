@@ -1,0 +1,43 @@
+<body>
+<div class="password-generator">
+    <h2>Password Generator</h2>
+
+    <div class="password-display">
+        <input type="text" [value]="generatedPassword" readonly>
+        <button class="copy-button">
+          <i class="fas fa-copy"></i>
+        </button>
+      </div>
+   
+    <div class="options">
+      <div class="character-length">
+        <label for="length">Character Length</label>
+        <span>{{passwordLength}}</span>
+      </div>
+
+      <div class="character-length">
+        <input type="range" id="length" [(ngModel)]="passwordLength" min="4" max="20">
+      
+      </div>
+     
+      <div class="checkbox-group">
+        <label><input type="checkbox" [(ngModel)]="includeUppercase"> Include Uppercase Letters</label>
+        <label><input type="checkbox" [(ngModel)]="includeLowercase"> Include Lowercase Letters</label>
+        <label><input type="checkbox" [(ngModel)]="includeNumbers"> Include Numbers</label>
+        <label><input type="checkbox" [(ngModel)]="includeSymbols"> Include Symbols</label>
+      </div>
+    </div>
+   
+    <div class="strength-meter">
+      <span>STRENGTH</span>
+      <div class="strength-bars">
+        <div class="bar" [ngClass]="{'active': passwordStrength >= 1}"></div>
+        <div class="bar" [ngClass]="{'active': passwordStrength >= 2}"></div>
+        <div class="bar" [ngClass]="{'active': passwordStrength >= 3}"></div>
+        <div class="bar" [ngClass]="{'active': passwordStrength >= 4}"></div>
+      </div>
+    </div>
+   
+    <button class="generate-button" (click)="generatePassword()">GENERATE <i class="fas fa-arrow-right"></i></button>
+  </div>
+  </body>
