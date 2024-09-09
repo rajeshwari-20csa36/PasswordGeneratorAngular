@@ -12,8 +12,10 @@
   }
    
   h2 {
+  
     color: #817D92;
     margin-bottom: 16px;
+    font-size: 32px ;
   }
    
   .password-display {
@@ -59,6 +61,7 @@
   .character-length input[type="range"] {
     width: 100%;
     margin: 0px;
+    accent-color:#A4FFAF;
   }
 
   .character-length span{
@@ -68,7 +71,14 @@
   .checkbox-group label {
     display: block;
     margin-bottom: 8px;
+   
   }
+   
+  .checkbox-group input[type="checkbox"] {
+    accent-color: #A4FFAF;
+  }
+  
+ 
    
   .strength-meter {
     background-color: #18171F;

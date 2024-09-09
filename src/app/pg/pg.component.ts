@@ -5,9 +5,9 @@ import { FormsModule } from '@angular/forms';
 @Component({
   selector: 'app-pg',
   standalone: true,
-  imports: [FormsModule,CommonModule],
+  imports: [FormsModule, CommonModule],
   templateUrl: './pg.component.html',
-  styleUrls: ['./pg.component.css']
+  styleUrls: ['./pg.component.css'],
 })
 export class PgComponent {
   passwordLength: number = 12;
@@ -17,24 +17,24 @@ export class PgComponent {
   includeSymbols: boolean = true;
   generatedPassword: string = '';
   passwordStrength: number = 0;
- 
+
   generatePassword() {
     const uppercaseChars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ';
     const lowercaseChars = 'abcdefghijklmnopqrstuvwxyz';
     const numberChars = '0123456789';
     const symbolChars = '!@#$%^&*()_+~`|}{[]:;?><,./-=';
- 
+
     let charSet = '';
     if (this.includeUppercase) charSet += uppercaseChars;
     if (this.includeLowercase) charSet += lowercaseChars;
     if (this.includeNumbers) charSet += numberChars;
     if (this.includeSymbols) charSet += symbolChars;
- 
+
     this.generatedPassword = Array.from({ length: this.passwordLength })
       .map(() => charSet.charAt(Math.floor(Math.random() * charSet.length)))
       .join('');
- 
-      this.calculateStrength();
+
+    this.calculateStrength();
   }
   calculateStrength() {
     this.passwordStrength = 0;
@@ -43,9 +43,8 @@ export class PgComponent {
     if (this.includeNumbers) this.passwordStrength++;
     if (this.includeSymbols) this.passwordStrength++;
 
-    if (this.generatedPassword.length >= 12) {
+    if (this.generatedPassword.length >= 10) {
       this.passwordStrength++;
     }
-}
-
+  }
 }
